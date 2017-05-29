@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/bb4b1d912e48e1d4cddbd5041f700617bb3dd89e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e4afd211b71c9f97762ff935c13a6e82e72821e2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b136f7b35cbc91abf7322a2c952dac091f7fc248">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c54f3cada0e2b926a944d6f377baa946a5097c38/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/7721506628413fcd32357dc51a27ca3030f765ee/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6a088d62fc9dd86063747161c7f470fe4cdc5742/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/671006c35d9ebad52286d4d6e302d4ae5c8d1d3c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3e44d0cd0e65762f0f2209e1033267ca9c331a72/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_19ebe276d101a16f596ad620febe9010369beedb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_fec90f9eccd58639d99e9d2528e53d9d945c7039/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/0a05b7e6b6a3b08584356f9d786b098d922f7384/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_51b3f4e261722f3ff3bcb9167e315e468e7f306f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/904d71b623e7c4960eb844dfa1d4931c6d8eef2b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_469b9c95c65df1960d0278ded545420c4d564a46/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/6891317c9495a140faf265ed3a3179b53403e4cd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0291b8ad1e4f93bb96ec169714dde243b53ab868/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/34db4c09b25bc42fb0fa4e28cde1600033d1615c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0cec67e36defaaea8e4d9b8775ea06bcd98ae048/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/82ec397d142d9b44f4652a88502da1e4f8e6c68e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7744a21b62becd96843f01b68b3a81077c7d8fbe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_66f7d515d583c1dcf27434fbc85116e7ca12e2ce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/eab320cd486a11332f7f02a2154d1e5118f0cc3f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ba8a41fb0aa032c785a6be05a81eae917c9c1c4e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rhapsody/.android/build-cache/33da25c1a6c086f88370d6f02be642b37ff1ba81/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9d1a0e7744b51ef112e12023b8a96e8ee3ea4577/classes.dex" />
+    </item>
+
+</items>

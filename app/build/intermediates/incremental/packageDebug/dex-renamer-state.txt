@@ -1,0 +1,7 @@
+#Sun May 28 23:12:13 BRT 2017
+base.0=/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c54f3cada0e2b926a944d6f377baa946a5097c38
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_66f7d515d583c1dcf27434fbc85116e7ca12e2ce/classes.dex
+base.1=/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_66f7d515d583c1dcf27434fbc85116e7ca12e2ce
+file.0=/home/rhapsody/AndroidStudioProjects/CosmoCalc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c54f3cada0e2b926a944d6f377baa946a5097c38/classes.dex
