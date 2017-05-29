@@ -1,6 +1,9 @@
-##cosmocalc 
-
+## cosmocalc
 
 Projeto de calculadora cosmologica
+Exibe dados de cosmologia como:
+ - Anos desde o Big bang,
+ - Redshift
+  . . . 
 
-Feito no android Studio  
+Feito no Adroid Studio;
