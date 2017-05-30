@@ -1,4 +1,4 @@
-## CosmoCalc
+## CalculadoraCosmologica
 
 Projeto de calculadora cosmologica
 Exibe dados de cosmologia como:
