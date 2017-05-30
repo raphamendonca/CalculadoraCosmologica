@@ -6,4 +6,6 @@ Exibe dados de cosmologia como:
  - Redshift
   . . . 
 
-Feito no Adroid Studio;
+Projeto desenvolvido no Android Studio
+
+Adaptado do projeto de Ned Wright. http://www.astro.ucla.edu/~wright/CosmoCalc.html
