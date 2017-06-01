@@ -100,7 +100,6 @@ public class Calculadora {
             y = ratio * DCMR;
             return y;
         }
-        ;
         y = x * x;
         // statement below fixed 13-Aug-03 to correct sign error in expansion
         if (WK < 0) {
@@ -125,7 +124,6 @@ public class Calculadora {
             y = ratio * DCMR * DCMR * DCMR / 3;
             return y;
         }
-        ;
         y = x * x;
         // statement below fixed 13-Aug-03 to correct sign error in expansion
         if (WK < 0) {
@@ -151,7 +149,6 @@ public class Calculadora {
             double adot = Math.sqrt(WK + (WM / a) + (WR / (a * a)) + (WV * a * a));
             age = age + 1 / adot;
         }
-        ;
 
         double zage = az * age / n;
         // correction for annihilations of particles not present now like e+/e-
@@ -263,6 +260,9 @@ public class Calculadora {
 
     public void doFlat(double tH0, double tWM, double tz) {
         setValues(tH0, tWM, 1.0 - tWM - 0.4165 / (tH0 * tH0), tz);
+
+
+
     }
 
     public void doGeneral(double tH0, double tWM, double tWV, double tz) {
