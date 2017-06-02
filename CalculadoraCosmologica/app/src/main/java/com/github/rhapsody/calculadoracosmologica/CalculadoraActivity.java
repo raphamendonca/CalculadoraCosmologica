@@ -16,8 +16,8 @@ public class CalculadoraActivity extends AppCompatActivity {
     private double tWM = 0.286;
     private double tWV = 0.714;
 
-    EditText iH0,iZ, iWM, itWV;
-    TextView bigBangeAge, redshiftAge, lightTravelTime, comovingRadial, comovingVolume, bigBangeAn;
+    EditText iH0, iZ, iWM, itWV;
+    TextView bigBangeAge, redshiftAge, lightTravelTime, comovingRadialMpc, comovingRadialGly, comovingVolume, angularDistanceMpc, angularDistanceGly, scaleFactor, lumDistanceMpc, lumDistanceGly;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,22 +25,18 @@ public class CalculadoraActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calculadora);
 
         iH0 = (EditText) findViewById(R.id.inputH0);
-        iH0.setText(String.valueOf(tH0));
-
         iZ = (EditText) findViewById(R.id.inputZ);
-        iZ.setText(String.valueOf(tz));
-
         iWM = (EditText) findViewById(R.id.inputOmegaM);
-        iWM.setText(String.valueOf(tWM));
-
         itWV = (EditText) findViewById(R.id.inputOmegaV);
-        itWV.setText(String.valueOf(tWV));
+
+        resetarCampos();
 
         calc = new Calculadora();
 
-        Button btOpen =  (Button) findViewById(R.id.calcOpen);
-        Button btFlat =  (Button) findViewById(R.id.calcFlat);
-        Button btGeneral =  (Button) findViewById(R.id.calcGeneral);
+        Button btOpen = (Button) findViewById(R.id.calcOpen);
+        Button btFlat = (Button) findViewById(R.id.calcFlat);
+        Button btGeneral = (Button) findViewById(R.id.calcGeneral);
+        Button btReset = (Button) findViewById(R.id.restoreBtn);
 
         btOpen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,21 +59,54 @@ public class CalculadoraActivity extends AppCompatActivity {
                 recarregaDados();
             }
         });
+        btReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetarCampos();
+            }
+        });
+
 
         bigBangeAge = (TextView) findViewById(R.id.bigBangAge);
         redshiftAge = (TextView) findViewById(R.id.redshiftAge);
         lightTravelTime = (TextView) findViewById(R.id.lightTravelTime);
-        //final TextView comovingRadial = (TextView) findViewById(R.id.bigBangAge);
-        //final TextView comovingVolume = (TextView) findViewById(R.id.bigBangAge);
-        //final TextView bigBangeAnge = (TextView) findViewById(R.id.bigBangAge);
+        comovingRadialMpc = (TextView) findViewById(R.id.comovingRadialMpc);
+        //comovingRadialGly = (TextView) findViewById(R.id.comovingRadialGly);
+        comovingVolume = (TextView) findViewById(R.id.comovingVolume);
+        angularDistanceMpc = (TextView) findViewById(R.id.angularDistanceMpc);
+        //angularDistanceGly = (TextView) findViewById(R.id.angularDistanceGly);
+        scaleFactor = (TextView) findViewById(R.id.scaleFactor);
+        lumDistanceMpc= (TextView) findViewById(R.id.lumDistanceMpc);
+        //lumDistanceGly = (TextView) findViewById(R.id.lumDistanceGly);
+
 
     }
 
-    private void recarregaDados(){
-        bigBangeAge.setText(calc.stround(calc.age_Gyr, 3));
-        redshiftAge.setText(calc.stround(calc.zage_Gyr, 3) + calc.tunit );
-        lightTravelTime.setText(calc.stround(calc.DTT_Gyr, 3));
+    protected void recarregaDados() {
+        bigBangeAge.setText(calc.stround(calc.age_Gyr, 3) + " Gyr");
+        redshiftAge.setText(calc.stround(calc.zage_Gyr, 3) + calc.tunit);
+        lightTravelTime.setText(calc.stround(calc.DTT_Gyr, 3) + " Gyr");
+
+        comovingRadialMpc.setText(calc.stround(calc.DCMR_Mpc, 1) + " Mpc");
+        //comovingRadialGly.setText(calc.stround(calc.DCMR_Gyr, 3) + " Gly");
+
+        comovingVolume.setText(calc.stround(calc.DTT_Gyr, 3) + " Gpc³");
+
+        angularDistanceMpc.setText(calc.stround(calc.DTT_Gyr, 3) + " Mpc");
+        //angularDistanceGly.setText(calc.stround(calc.DTT_Gyr, 3) + " Gly");
+
+        scaleFactor.setText(calc.stround(calc.DTT_Gyr, 3) + " kpc");
+
+        lumDistanceMpc.setText(calc.stround(calc.DTT_Gyr, 3) + " Mpc");
+        //lumDistanceGly.setText(calc.stround(calc.DTT_Gyr, 3) + " Gly");
+
     }
 
+    protected void resetarCampos() {
+        iH0.setText(String.valueOf(tH0));
+        iZ.setText(String.valueOf(tz));
+        iWM.setText(String.valueOf(tWM));
+        itWV.setText(String.valueOf(tWV));
+    }
 
 }

@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
     tools:context="com.github.rhapsody.calculadoracosmologica.CalculadoraActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
@@ -28,7 +30,7 @@
                 android:id="@+id/inputH0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -39,7 +41,7 @@
                 android:id="@+id/inputZ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -49,7 +51,8 @@
             <EditText
                 android:id="@+id/inputOmegaM"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -60,7 +63,7 @@
                 android:id="@+id/inputOmegaV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -75,22 +78,28 @@
                 <Button
                     android:id="@+id/calcOpen"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Aberto" />
 
                 <Button
                     android:id="@+id/calcFlat"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1sp"
+                    android:layout_height="match_parent"
+
                     android:text="Plano" />
 
                 <Button
                     android:id="@+id/calcGeneral"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1sp"
+                    android:layout_height="match_parent"
+
                     android:text="Geral" />
+
+                <Button
+                    android:id="@+id/restoreBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Limpa campos" />
 
             </LinearLayout>
             <!-- ////////////////////////////////////////////////////////////////////////////// -->
@@ -101,16 +110,15 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/resp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tempo desde o Big Bang: " />
 
-
                 <TextView
                     android:id="@+id/bigBangAge"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -121,7 +129,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/resp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Idade no redshift foi: " />
@@ -129,7 +136,8 @@
                 <TextView
                     android:id="@+id/redshiftAge"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
             </LinearLayout>
             <!-- Light Time Travel-->
             <LinearLayout
@@ -138,7 +146,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/resp3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="O tempo de viagem da luz foi de :" />
@@ -146,9 +153,128 @@
                 <TextView
                     android:id="@+id/lightTravelTime"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!-- Radial Distance -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A distância radial comóvel é :" />
+
+                <TextView
+                    android:id="@+id/comovingRadialMpc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
+
+                <!--TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ou " />
+
+                <TextView
+                    android:id="@+id/comovingRadialGly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" /-->
             </LinearLayout>
 
+            <!-- Volume Comóvel-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O volume comóvel dentro do redshift z é: " />
+
+                <TextView
+                    android:id="@+id/comovingVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Angular Distance -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isso da uma escala de :" />
+
+                <TextView
+                    android:id="@+id/angularDistanceMpc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
+
+                <!--TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ou " />
+
+                <TextView
+                    android:id="@+id/angularDistanceGly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" /-->
+            </LinearLayout>
+
+            <!-- Scale -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O tempo de viagem da luz foi de :" />
+
+                <TextView
+                    android:id="@+id/scaleFactor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Luminosity distance -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A distância de luminosidade DL é: " />
+
+                <TextView
+                    android:id="@+id/lumDistanceMpc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
+
+                <!--TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ou " />
+
+                <TextView
+                    android:id="@+id/lumDistanceGly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" / -->
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
