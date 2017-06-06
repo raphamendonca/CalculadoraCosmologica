@@ -90,14 +90,14 @@ public class CalculadoraActivity extends AppCompatActivity {
         comovingRadialMpc.setText(calc.stround(calc.DCMR_Mpc, 1) + " Mpc");
         //comovingRadialGly.setText(calc.stround(calc.DCMR_Gyr, 3) + " Gly");
 
-        comovingVolume.setText(calc.stround(calc.DTT_Gyr, 3) + " Gpc³");
+        comovingVolume.setText(calc.stround(calc.V_Gpc, 3) + " Gpc³");
 
-        angularDistanceMpc.setText(calc.stround(calc.DTT_Gyr, 3) + " Mpc");
+        angularDistanceMpc.setText(calc.stround(calc.DA_Gyr, 3) + " Mpc");
         //angularDistanceGly.setText(calc.stround(calc.DTT_Gyr, 3) + " Gly");
 
-        scaleFactor.setText(calc.stround(calc.DTT_Gyr, 3) + " kpc");
+        scaleFactor.setText(calc.stround(calc.kpc_DA, 3) + " kpc");
 
-        lumDistanceMpc.setText(calc.stround(calc.DTT_Gyr, 3) + " Mpc");
+        lumDistanceMpc.setText(calc.stround(calc.DL_Mpc, 1) + " Mpc");
         //lumDistanceGly.setText(calc.stround(calc.DTT_Gyr, 3) + " Gly");
 
     }
