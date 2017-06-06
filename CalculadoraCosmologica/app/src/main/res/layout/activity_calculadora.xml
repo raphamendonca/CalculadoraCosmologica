@@ -112,7 +112,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tempo desde o Big Bang: " />
+                    android:text="@string/bigBang" />
 
                 <TextView
                     android:id="@+id/bigBangAge"
@@ -131,7 +131,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Idade no redshift foi: " />
+                    android:text="@string/redshift" />
 
                 <TextView
                     android:id="@+id/redshiftAge"
@@ -148,7 +148,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="O tempo de viagem da luz foi de :" />
+                    android:text="@string/lookback" />
 
                 <TextView
                     android:id="@+id/lightTravelTime"
@@ -165,7 +165,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A distância radial comóvel é :" />
+                    android:text="@string/comovingRadial" />
 
                 <TextView
                     android:id="@+id/comovingRadialMpc"
@@ -193,7 +193,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="O volume comóvel dentro do redshift z é: " />
+                    android:text="@string/comovingVomlume" />
 
                 <TextView
                     android:id="@+id/comovingVolume"
@@ -211,7 +211,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Isso da uma escala de :" />
+                    android:text="@string/angDistMpc" />
 
                 <TextView
                     android:id="@+id/angularDistanceMpc"
@@ -238,8 +238,8 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="O tempo de viagem da luz foi de :" />
+                    android:layout_height="wrap_content"                   
+                    android:text="@string/scaleFactor" />
 
                 <TextView
                     android:id="@+id/scaleFactor"
@@ -257,7 +257,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A distância de luminosidade DL é: " />
+                    android:text="@string/lumDistMpc" />
 
                 <TextView
                     android:id="@+id/lumDistanceMpc"
