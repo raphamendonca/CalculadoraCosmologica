@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Calculadora Cosmologica</string>
+    <string name="version_code">0.1</string>
+    <string name="version_name">beta</string>
     
     <string name="">O tempo de viagem da luz foi de :</string>
-    
 
     <string name="bigBang">Big Bang: </string>
     <string name="redshift">Redshift: </string>
@@ -14,11 +15,11 @@
     <string name="scaleFactor">Scale Factor (kpc/s)</string>
     <string name="lumDistMpc">A distância de luminosidade DL é: </string>
     
-    <string name="DescricaoBooes"> Aberto</string>
-    <string name="btOpen"> Aberto</string>
-    <string name="btFlat"> Plano</string>
-    <string name="btGeneral"> Geral</string>
-    <string name="btReset"> Default Values</string>
+    <string name="descricaoBotoes">Modelo de universo</string>
+    <string name="btOpen">Aberto</string>
+    <string name="btFlat">Plano</string>
+    <string name="btGeneral">Geral</string>
+    <string name="btReset">Reseta Valores</string>
     
     
     <string name="mpc"> megaparsec</string>
