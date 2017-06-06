@@ -19,7 +19,7 @@ It is now 13.721 Gyr since the Big Bang.
    age = 0; 
      para (i = 0; i != n; i++) {
        a = az*(i+0.5)/n;
-       age = age + 1/suareRoot(WK+(WM/a)+(WR/(a*a))+(WV*a*a));
+       age = age + 1/suareRoot(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
      };  
 + zage = az*age/n * 10.0 ^ dzage
 + age = DTT +  az*age/n * 10.0 ^ dzage
@@ -41,11 +41,11 @@ The age at redshift z is given by the value of zage_Gyr, starting from equation:
   where age is the integral from 0 to 1000 
    age = 0; 
      para (i = 0; i != n; i++) {
-       a = az*(i+0.5)/n;
-       adot = Math.sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a));
-       age = age + 1/suareRoot(WK+(WM/a)+(WR/(a*a))+(WV*a*a));
-     };
-     
+       a = az*(i+0.5)/n
+       adot = Math.sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
+       age = age + 1/suareRoot(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
+     }
+    
 + zage = az*age/n * 10.0 ^ dzage
 + Tyr = 977.8
 
@@ -110,11 +110,11 @@ This gives a scale of 7.855 kpc/s.  kpc_DA
 + DA = az*DCMT()
 + az = 1.0/(1+1.0*z)
 
-** kpc_DA = ( 299792.458 / H0) * ( 1.0/(1+1.0*z) * DCMT() ) / 206.264806**
+**kpc_DA = ( 299792.458 / H0) * ( 1.0/(1+1.0*z) * DCMT() ) / 206.264806**
 
 + DCMT() = Tangential Comoving Distance
 
-** kpc_DA = ( 299792.458 / H0) * ( 1.0/(1+1.0*z) * DCMT() ) / 206.264806**
+**kpc_DA = ( 299792.458 / H0) * ( 1.0/(1+1.0*z) * DCMT() ) / 206.264806**
 
   
 ### The luminosity distance DL is 25924.3 Mpc or 84.554 Gly.
@@ -130,7 +130,7 @@ Starting from the equation:
 + az = 1.0/(1+1.0*z)
 + DL = DA/(az*az)
 
-**-> DL_Mpc = ( 299792.458 / H0 ) * ( 1.0/(1+1.0*z) ) * DCMT() / ( 1.0/(1+1.0*z) )^2 **
+**DL_Mpc = ( 299792.458 / H0 ) * ( 1.0/(1+1.0*z) ) * DCMT() / ( 1.0/(1+1.0*z) )^2**
 
 ----------------------------------------------------------------------------------------------
 
@@ -196,13 +196,13 @@ Starting from the equation:
 #### Tangential Comoving Distance
 **DCMT**
 DCMT(){
-  ratio = 1.00;
-  x = sqrt( |WK|  )*DCMR;
+  ratio = 1.00
+  x = sqrt( |WK|  )*DCMR
   
   if (x > 0.1) {
-    ratio =  (WK > 0) ? 0.5*(Math.exp(x)-Math.exp(-x))/x : Math.sin(x)/x;
-    y = ratio*DCMR;
-    return y;
+    ratio =  (WK > 0) ? 0.5*(Math.exp(x)-Math.exp(-x))/x : Math.sin(x)/x
+    y = ratio*DCMR
+    return y
   }
   y = x*x
   
@@ -219,22 +219,22 @@ DCMT(){
 #### Comoving Volume Computation
 **VCM**
 VCM(){
-  ratio = 1.00;
-  x = sqrt( |WK| )*DCMR;
+  ratio = 1.00
+  x = sqrt( |WK| )*DCMR
   
   if (x > 0.1) {
     ratio =  (WK > 0) ? (0.125*(Math.exp(2*x)-Math.exp(-2*x))-x/2)/(x*x*x/3) :
-    (x/2 - sen(2*x)/4)/(x*x*x/3) ;
-    y = ratio*DCMR*DCMR*DCMR/3;
-    return y;
+    (x/2 - sen(2*x)/4)/(x*x*x/3) 
+    y = ratio*DCMR*DCMR*DCMR/3
+    return y
   };
   
   y = x*x
   
  statement below fixed 13-Aug-03 to correct sign error in expansion
-  if (WK < 0) y = -y;
-  ratio = 1 + y/5 + (2/105)*y*y;
-  y= ratio*DCMR*DCMR*DCMR/3;
+  if (WK < 0) y = -y
+  ratio = 1 + y/5 + (2/105)*y*y
+  y= ratio*DCMR*DCMR*DCMR/3
   return y;
   
   
@@ -244,65 +244,65 @@ VCM(){
   Calculate h as H0 /100
   
   Includes 3 massless neutrino species, T0 = 2.72528
-  WR = 4.165E-5/(h*h);	
-  WK = 1-WM-WR-WV;
+  WR = 4.165E-5/(h*h)
+  WK = 1-WM-WR-WV
   
   Scale Factor
-  az = 1.0/(1+1.0*z);
+  az = 1.0/(1+1.0*z)
   
   age = 0; 
   para (i = 0; i != n; i++) {
-    a = az*(i+0.5)/n;
-    adot = Math.sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a));
-    age = age + 1/suareRoot(WK+(WM/a)+(WR/(a*a))+(WV*a*a));
-  };
+    a = az*(i+0.5)/n
+    adot = Math.sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
+    age = age + 1/suareRoot(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
+  }
   zage = az*age/n
   
  correction for annihilations of particles not present now like e+/e-
  added 13-Aug-03 based on T_vs_t.f
  
-  var lpz = Math.log((1+1.0*z))/Math.log(10.0);
-  var dzage = 0;
+  var lpz = Math.log((1+1.0*z))/Math.log(10.0)
+  var dzage = 0
   
-  if (lpz >  7.500) dzage = 0.002 * (lpz -  7.500);
-  if (lpz >  8.000) dzage = 0.014 * (lpz -  8.000) +  0.001;
-  if (lpz >  8.500) dzage = 0.040 * (lpz -  8.500) +  0.008;
-  if (lpz >  9.000) dzage = 0.020 * (lpz -  9.000) +  0.028;
-  if (lpz >  9.500) dzage = 0.019 * (lpz -  9.500) +  0.039;
-  if (lpz > 10.000) dzage = 0.048;
-  if (lpz > 10.775) dzage = 0.035 * (lpz - 10.775) +  0.048;
-  if (lpz > 11.851) dzage = 0.069 * (lpz - 11.851) +  0.086;
-  if (lpz > 12.258) dzage = 0.461 * (lpz - 12.258) +  0.114;
-  if (lpz > 12.382) dzage = 0.024 * (lpz - 12.382) +  0.171;
-  if (lpz > 13.055) dzage = 0.013 * (lpz - 13.055) +  0.188;
-  if (lpz > 14.081) dzage = 0.013 * (lpz - 14.081) +  0.201;
-  if (lpz > 15.107) dzage = 0.214;
-  zage = zage*Math.pow(10.0,dzage);
+  if (lpz >  7.500) dzage = 0.002 * (lpz -  7.500)
+  if (lpz >  8.000) dzage = 0.014 * (lpz -  8.000) +  0.001
+  if (lpz >  8.500) dzage = 0.040 * (lpz -  8.500) +  0.008
+  if (lpz >  9.000) dzage = 0.020 * (lpz -  9.000) +  0.028
+  if (lpz >  9.500) dzage = 0.019 * (lpz -  9.500) +  0.039
+  if (lpz > 10.000) dzage = 0.048
+  if (lpz > 10.775) dzage = 0.035 * (lpz - 10.775) +  0.048
+  if (lpz > 11.851) dzage = 0.069 * (lpz - 11.851) +  0.086
+  if (lpz > 12.258) dzage = 0.461 * (lpz - 12.258) +  0.114
+  if (lpz > 12.382) dzage = 0.024 * (lpz - 12.382) +  0.171
+  if (lpz > 13.055) dzage = 0.013 * (lpz - 13.055) +  0.188
+  if (lpz > 14.081) dzage = 0.013 * (lpz - 14.081) +  0.201
+  if (lpz > 15.107) dzage = 0.214
+  zage = zage*Math.pow(10.0,dzage)
 
-  zage_Gyr = (Tyr/H0)*zage;
-  DTT = 0.0;
-  DCMR = 0.0;
+  zage_Gyr = (Tyr/H0)*zage
+  DTT = 0.0
+  DCMR = 0.0
   
 ** do integral over a=1/(1+z) from az to 1 in n steps, midpoint rule**
   for (i = 0; i != n; i++) {
-    a = az+(1-az)*(i+0.5)/n;
-    adot = Math.sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a));
-    DTT = DTT + 1/adot;
-    DCMR = DCMR + 1/(a*adot);
-  };
-  DTT = (1-az)*DTT/n;
-  DCMR = (1-az)*DCMR/n;
-  age = DTT+zage;
-  age_Gyr = age*(Tyr/H0);
-  DTT_Gyr = (Tyr/H0)*DTT;
-  DCMR_Gyr = (Tyr/H0)*DCMR;
-  DCMR_Mpc = (c/H0)*DCMR;
-  DA = az*DCMT();
-  DA_Mpc = (c/H0)*DA;
-  kpc_DA = DA_Mpc/206.264806;
-  DA_Gyr = (Tyr/H0)*DA;
-  DL = DA/(az*az);
-  DL_Mpc = (c/H0)*DL;
-  DL_Gyr = (Tyr/H0)*DL;
-  V_Gpc = 4*Math.PI*Math.pow(0.001*c/H0,3)*VCM();
+    a = az+(1-az)*(i+0.5)/n
+    adot = Math.sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
+    DTT = DTT + 1/adot
+    DCMR = DCMR + 1/(a*adot)
+  }
+  DTT = (1-az)*DTT/n
+  DCMR = (1-az)*DCMR/n
+  age = DTT+zage
+  age_Gyr = age*(Tyr/H0)
+  DTT_Gyr = (Tyr/H0)*DTT
+  DCMR_Gyr = (Tyr/H0)*DCMR
+  DCMR_Mpc = (c/H0)*DCMR
+  DA = az*DCMT()
+  DA_Mpc = (c/H0)*DA
+  kpc_DA = DA_Mpc/206.264806
+  DA_Gyr = (Tyr/H0)*DA
+  DL = DA/(az*az)
+  DL_Mpc = (c/H0)*DL
+  DL_Gyr = (Tyr/H0)*DL
+  V_Gpc = 4*Math.PI*Math.pow(0.001*c/H0,3)*VCM()
 
