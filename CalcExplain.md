@@ -10,34 +10,33 @@ Default Values:
 ### Big Bang time
 It is now 13.721 Gyr since the Big Bang.
  this value is calculated by age_Gyr
- *** age_Gyr = age * (Tyr/H0) ***
-  
- age = DTT + zage 
+
+**age_Gyr = age * (Tyr/H0)**
+
++ age = DTT + zage 
  
  where age is the integral from 0 to 1000 
    age = 0; 
      para (i = 0; i != n; i++) {
        a = az*(i+0.5)/n;
        age = age + 1/suareRoot(WK+(WM/a)+(WR/(a*a))+(WV*a*a));
-     };
-     
- zage = az*age/n * 10.0 ^ dzage
- age = DTT +  az*age/n * 10.0 ^ dzage
+     };  
++ zage = az*age/n * 10.0 ^ dzage
++ age = DTT +  az*age/n * 10.0 ^ dzage
    
- -> *** age_Gyr = DTT +  az*age/n * 10.0 ^ dzage  * (Tyr/H0) ***
- 
- DTT value increase by the integral over a=1/(1+z) from az to 1 in n steps, midpoint rule
- DTT = (1-az)*DTT/n 
- az = 1.0/(1+1.0*z)
- 
- Tyr = 977.8 
+**age_Gyr = DTT +  az*age/n * 10.0 ^ dzage  * (Tyr/H0)**
++ DTT value increase by the integral over a=1/(1+z) from az to 1 in n steps, midpoint rule
++ DTT = (1-az)*DTT/n 
++ az = 1.0/(1+1.0*z)
++ Tyr = 977.8 
 
- -> *** age_Gyr = (1 - (1.0/(1+1.0*z)) )*DTT/n  +  (1.0/(1+1.0*z))*age/n * 10.0 ^ dzage  * (977.8 /H0) ***
+**age_Gyr = (1 - (1.0/(1+1.0*z)) )*DTT/n  +  (1.0/(1+1.0*z))*age/n * 10.0 ^ dzage  * (977.8 /H0)**
    
  
 ### Redsfhit
 The age at redshift z is given by the value of zage_Gyr, starting from equation:
-  *** zage_Gyr = (Tyr/H0)*zage ***
+
+**zage_Gyr = (Tyr/H0)*zage**
   
   where age is the integral from 0 to 1000 
    age = 0; 
@@ -47,43 +46,48 @@ The age at redshift z is given by the value of zage_Gyr, starting from equation:
        age = age + 1/suareRoot(WK+(WM/a)+(WR/(a*a))+(WV*a*a));
      };
      
- zage = az*age/n * 10.0 ^ dzage
- Tyr = 977.8
- ->  *** zage_Gyr = (977.8/H0)*az*age/n * 10.0 ^ dzage ***
++ zage = az*age/n * 10.0 ^ dzage
++ Tyr = 977.8
 
- az = 1.0/(1+1.0*z)
- ->  *** zage_Gyr = (977.8/H0)*(1.0/(1+1.0*z))*age/n * 10.0 ^ dzage ***
+**zage_Gyr = (977.8/H0)*az*age/n * 10.0 ^ dzage**
+
++ az = 1.0/(1+1.0*z)
+
+**zage_Gyr = (977.8/H0)*(1.0/(1+1.0*z))*age/n * 10.0 ^ dzage**
 
 ### Lookback Time
-   The light travel time was 11.549 Gyr.
-   DTT_Gyr
+ The light travel time was 11.549 Gyr.
+ DTT_Gyr
 
-   *** DTT_Gyr = (Tyr/H0)*DTT ***
-   Tyr = 977.8
-   H0 = given by the user
+ **DTT_Gyr = (Tyr/H0)*DTT**
+ 
+ + Tyr = 977.8
+ + H0 = given by the user
 
-   -> *** DTT_Gyr = (Tyr/H0)*DTT ***
-     DTTx value increase by the integral over a=1/(1+z) from az to 1 in n steps, midpoint rule
-     DTT = (1-az)*DTTx/n 
-     az = 1.0/(1+1.0*z)
-   -> *** DTT_Gyr = (Tyr/H0)*(1-(1.0/(1+1.0*z)))*DTT/n  ***
+**DTT_Gyr = (Tyr/H0)*DTT**
+
++ DTTx value increase by the integral over a=1/(1+z) from az to 1 in n steps, midpoint rule
++ DTT = (1-az)*DTTx/n 
++ az = 1.0/(1+1.0*z)
+
+**DTT_Gyr = (Tyr/H0)*(1-(1.0/(1+1.0*z)))*DTT/n**
 
 ###  Comoving Radial Distance
 The comoving radial distance, which goes into Hubbles law, is 6481.3 Mpc or 21.139 Gly.
 DCMR_Mpc
 
-  *** DCMR_Mpc = (c/H0)*DCMR ***
+**DCMR_Mpc = (c/H0)*DCMR**
 
-  c = 299792.458
-  H0 = given by user
-  z = given by user
-  DCMR = (1-az)*DCMRX/n;
-  DCMRX = integral over a=1/(1+z) from az to 1 in n steps
-  
-  az = 1.0/(1+1.0*z)
-  n = 1000
-  c = 299792.458
-  -> *** DCMR_Mpc = (299792.458/H0)*(1-1.0/(1+1.0*z))*DCMRX/1000 ***
++ c = 299792.458
++ H0 = given by user
++ z = given by user
++ DCMR = (1-az)*DCMRX/n
++ DCMRX = integral over a=1/(1+z) from az to 1 in n steps
++ az = 1.0/(1+1.0*z)
++ n = 1000
++ c = 299792.458
+
+**DCMR_Mpc = (299792.458/H0)*(1-1.0/(1+1.0*z))*DCMRX/1000**
 
 
 ### Comoving Volume Redshift
@@ -95,36 +99,38 @@ The angular size distance DA is 1620.3 Mpc or 5.2846 Gly.
 DA_Gyr
 
 ### Scale
-This gives a scale of 7.855 kpc/s.
-kpc_DA
-  *** kpc_DA = DA_Mpc/206.264806 ***
-  
-  DA_Mpc = (c/H0)*DA;
-  c = 299792.458
-  H0 = given by user
-  z = given by user
-  DA = az*DCMT();
-  az = 1.0/(1+1.0*z)
-  ->*** kpc_DA = ( 299792.458 / H0) * ( 1.0/(1+1.0*z) * DCMT() ) / 206.264806 ***
-    
-  DCMT() = Tangential Comoving Distance
-  
-  ->*** kpc_DA = ( 299792.458 / H0) * ( 1.0/(1+1.0*z) * DCMT() ) / 206.264806 ***
-  
+This gives a scale of 7.855 kpc/s.  kpc_DA
+
+**kpc_DA = DA_Mpc/206.264806**
+
++ DA_Mpc = (c/H0)*DA
++ c = 299792.458
++ H0 = given by user
++ z = given by user
++ DA = az*DCMT()
++ az = 1.0/(1+1.0*z)
+
+** kpc_DA = ( 299792.458 / H0) * ( 1.0/(1+1.0*z) * DCMT() ) / 206.264806**
+
++ DCMT() = Tangential Comoving Distance
+
+** kpc_DA = ( 299792.458 / H0) * ( 1.0/(1+1.0*z) * DCMT() ) / 206.264806**
+
   
 ### The luminosity distance DL is 25924.3 Mpc or 84.554 Gly.
 The luminosity dstance is given by the value of DL in units of Mpc. 
 Starting from the equation:
-*** DL_Mpc = (c/H0)*DL; ***
 
-  H0 = given by user
-  z = given by user
-  
-  c = 299792.458
-  DA = az*DCMT();
-  az = 1.0/(1+1.0*z)
-  DL = DA/(az*az);
-  -> *** DL_Mpc = ( 299792.458 / H0 ) * ( 1.0/(1+1.0*z) ) * DCMT() / ( 1.0/(1+1.0*z) )^2 ***
+**DL_Mpc = (c/H0)*DL**
+
++ H0 = given by user
++ z = given by user
++ c = 299792.458
++ DA = az*DCMT();
++ az = 1.0/(1+1.0*z)
++ DL = DA/(az*az)
+
+**-> DL_Mpc = ( 299792.458 / H0 ) * ( 1.0/(1+1.0*z) ) * DCMT() / ( 1.0/(1+1.0*z) )^2 **
 
 ----------------------------------------------------------------------------------------------
 
@@ -188,7 +194,7 @@ Starting from the equation:
 
 
 #### Tangential Comoving Distance
-***DCMT***
+**DCMT**
 DCMT(){
   ratio = 1.00;
   x = sqrt( |WK|  )*DCMR;
@@ -211,7 +217,7 @@ DCMT(){
 
 
 #### Comoving Volume Computation
-***VCM***
+**VCM**
 VCM(){
   ratio = 1.00;
   x = sqrt( |WK| )*DCMR;
@@ -233,7 +239,7 @@ VCM(){
   
   
 #### calculate the actual results
- The method ***compute***
+ The method **compute**
   
   Calculate h as H0 /100
   
@@ -277,7 +283,7 @@ VCM(){
   DTT = 0.0;
   DCMR = 0.0;
   
-*** do integral over a=1/(1+z) from az to 1 in n steps, midpoint rule***
+** do integral over a=1/(1+z) from az to 1 in n steps, midpoint rule**
   for (i = 0; i != n; i++) {
     a = az+(1-az)*(i+0.5)/n;
     adot = Math.sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a));
