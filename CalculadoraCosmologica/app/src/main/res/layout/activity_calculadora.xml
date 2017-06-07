@@ -75,7 +75,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="Omega VAc" />
+                        android:text="Omega Vacuo" />
 
                     <EditText
                         android:id="@+id/inputOmegaV"
@@ -125,6 +125,11 @@
 
             </LinearLayout>
             <!-- ////////////////////////////////////////////////////////////////////////////// -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAlert"
+                android:id="@+id/alertMSG"/>
 
             <TableLayout
                 android:layout_width="match_parent"

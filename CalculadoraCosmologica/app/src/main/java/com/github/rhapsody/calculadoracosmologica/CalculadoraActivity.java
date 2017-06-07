@@ -1,5 +1,6 @@
 package com.github.rhapsody.calculadoracosmologica;
 
+import android.graphics.PorterDuff;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,9 +19,9 @@ public class CalculadoraActivity extends AppCompatActivity {
     private double tz = 3;
     private double tWM = 0.286;
     private double tWV = 0.714;
-
-    EditText iH0, iZ, iWM, itWV;
-    TextView bigBangeAge, redshiftAge, lightTravelTime, comovingRadialMpc, comovingRadialGly, comovingVolume, angularDistanceMpc, angularDistanceGly, scaleFactor, lumDistanceMpc, lumDistanceGly;
+    StringBuffer alerta = new StringBuffer();
+    EditText iH0, iZ, iWM, iWV;
+    TextView bigBangeAge, redshiftAge, lightTravelTime, comovingRadialMpc, comovingRadialGly, comovingVolume, angularDistanceMpc, angularDistanceGly, scaleFactor, lumDistanceMpc, lumDistanceGly, alertMSG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class CalculadoraActivity extends AppCompatActivity {
         iH0 = (EditText) findViewById(R.id.inputH0);
         iZ = (EditText) findViewById(R.id.inputZ);
         iWM = (EditText) findViewById(R.id.inputOmegaM);
-        itWV = (EditText) findViewById(R.id.inputOmegaV);
+        iWV = (EditText) findViewById(R.id.inputOmegaV);
 
         resetarCampos();
 
@@ -40,26 +41,39 @@ public class CalculadoraActivity extends AppCompatActivity {
         Button btFlat = (Button) findViewById(R.id.calcFlat);
         Button btGeneral = (Button) findViewById(R.id.calcGeneral);
         Button btReset = (Button) findViewById(R.id.restoreBtn);
+        alertMSG = (TextView) findViewById(R.id.alertMSG);
 
         btOpen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calc.doOpen(Double.parseDouble(iH0.getText().toString()), Double.parseDouble(iWM.getText().toString()), Double.parseDouble(iZ.getText().toString()));
-                recarregaDados();
+                if (validaCampos()) {
+                    calc.doOpen(Double.parseDouble(iH0.getText().toString()), Double.parseDouble(iWM.getText().toString()), Double.parseDouble(iZ.getText().toString()));
+                    recarregaDados();
+                } else {
+                    alertMSG.setText(alerta.toString());
+                }
             }
         });
         btFlat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calc.doFlat(Double.parseDouble(iH0.getText().toString()), Double.parseDouble(iWM.getText().toString()), Double.parseDouble(iZ.getText().toString()));
-                recarregaDados();
+                if (validaCampos()) {
+                    calc.doFlat(Double.parseDouble(iH0.getText().toString()), Double.parseDouble(iWM.getText().toString()), Double.parseDouble(iZ.getText().toString()));
+                    recarregaDados();
+                } else {
+                    alertMSG.setText(alerta.toString());
+                }
             }
         });
         btGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calc.doGeneral(Double.parseDouble(iH0.getText().toString()), Double.parseDouble(iWM.getText().toString()), Double.parseDouble(itWV.getText().toString()), Double.parseDouble(iZ.getText().toString()));
-                recarregaDados();
+                if (validaCampos()) {
+                    calc.doGeneral(Double.parseDouble(iH0.getText().toString()), Double.parseDouble(iWM.getText().toString()), Double.parseDouble(iWV.getText().toString()), Double.parseDouble(iZ.getText().toString()));
+                    recarregaDados();
+                } else {
+                    alertMSG.setText(alerta.toString());
+                }
             }
         });
         btReset.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +93,7 @@ public class CalculadoraActivity extends AppCompatActivity {
         angularDistanceMpc = (TextView) findViewById(R.id.angularDistanceMpc);
         //angularDistanceGly = (TextView) findViewById(R.id.angularDistanceGly);
         scaleFactor = (TextView) findViewById(R.id.scaleFactor);
-        lumDistanceMpc= (TextView) findViewById(R.id.lumDistanceMpc);
+        lumDistanceMpc = (TextView) findViewById(R.id.lumDistanceMpc);
         //lumDistanceGly = (TextView) findViewById(R.id.lumDistanceGly);
 
 
@@ -103,13 +117,55 @@ public class CalculadoraActivity extends AppCompatActivity {
         lumDistanceMpc.setText(calc.stround(calc.DL_Mpc, 1));
         //lumDistanceGly.setText(calc.stround(calc.DTT_Gyr, 3) + " Gly");
 
+
     }
 
     protected void resetarCampos() {
+        tirarFoco();
         iH0.setText(String.valueOf(tH0));
         iZ.setText(String.valueOf(tz));
         iWM.setText(String.valueOf(tWM));
-        itWV.setText(String.valueOf(tWV));
+        iWV.setText(String.valueOf(tWV));
+    }
+    protected void tirarFoco(){
+        iH0.clearFocus();
+        iZ.clearFocus();
+        iWM.clearFocus();
+        iWV.clearFocus();
+
     }
 
+    protected boolean validaCampos() {
+        tirarFoco();
+        alerta.delete(0, alerta.length());
+
+        boolean isOk = true;
+        if (iH0.getText().toString().equals("")) {
+            //alerta.append(" H0  ");
+            iH0.getBackground().setColorFilter(getResources().getColor(R.color.colorAlert), PorterDuff.Mode.SRC_OVER);
+            isOk = false;
+        }
+        if (iWM.getText().toString().equals("")) {
+            //alerta.append(" Omega M ");
+            iWM.getBackground().setColorFilter(getResources().getColor(R.color.colorAlert), PorterDuff.Mode.SRC_OVER);
+            isOk = false;
+        }
+        if (iWV.getText().toString().equals("")) {
+            //alerta.append(" Omega V  ");
+            iWV.getBackground().setColorFilter(getResources().getColor(R.color.colorAlert), PorterDuff.Mode.SRC_OVER);
+            isOk = false;
+        }
+        if (iZ.getText().toString().equals("")) {
+            //alerta.append(" Z  ");
+            iZ.getBackground().setColorFilter(getResources().getColor(R.color.colorAlert), PorterDuff.Mode.SRC_OVER);
+            isOk = false;
+        }
+
+        if (!isOk) {
+            alerta.insert(0, "Os campos marcados  ");
+            alerta.append(" são de preeenchimento obrigatório");
+        }
+
+        return isOk;
+    }
 }

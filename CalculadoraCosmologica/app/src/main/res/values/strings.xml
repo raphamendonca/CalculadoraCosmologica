@@ -17,7 +17,7 @@
     <string name="btOpen">Aberto</string>
     <string name="btFlat">Plano</string>
     <string name="btGeneral">Geral</string>
-    <string name="btReset">Redefinir</string>
+    <string name="btReset">Valor Padrão</string>
     
     
     <string name="mpc"> megaparsec</string>
@@ -25,4 +25,6 @@
     <string name="gyr"> bilhoes de anos.</string>
     <string name="gly"> gly</string>
     <string name="kpcs"> Kpc/s</string>
+
+
 </resources>
