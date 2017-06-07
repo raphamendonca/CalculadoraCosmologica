@@ -44,7 +44,6 @@ public class CalculadoraActivity extends AppCompatActivity {
         alertMSG = (TextView) findViewById(R.id.alertMSG);
 
 
-
         btOpen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,31 +119,32 @@ public class CalculadoraActivity extends AppCompatActivity {
         lumDistanceMpc.setText(calc.stround(calc.DL_Mpc, 1));
         //lumDistanceGly.setText(calc.stround(calc.DTT_Gyr, 3) + " Gly");
 
-
     }
 
     protected void resetarCampos() {
-        tirarFoco();
+        limparValidacao();
         iH0.setText(String.valueOf(tH0));
         iZ.setText(String.valueOf(tz));
         iWM.setText(String.valueOf(tWM));
         iWV.setText(String.valueOf(tWV));
     }
-    protected void tirarFoco(){
+
+    protected void limparValidacao() {
         iH0.getBackground().setColorFilter(0, PorterDuff.Mode.SRC_OVER);
         iWM.getBackground().setColorFilter(0, PorterDuff.Mode.SRC_OVER);
         iWV.getBackground().setColorFilter(0, PorterDuff.Mode.SRC_OVER);
         iZ.getBackground().setColorFilter(0, PorterDuff.Mode.SRC_OVER);
+    }
 
+    protected void tirarFoco() {
         iH0.clearFocus();
         iZ.clearFocus();
         iWM.clearFocus();
         iWV.clearFocus();
-
     }
 
     protected boolean validaCampos() {
-        tirarFoco();
+        limparValidacao();
         alerta.delete(0, alerta.length());
 
         boolean isOk = true;

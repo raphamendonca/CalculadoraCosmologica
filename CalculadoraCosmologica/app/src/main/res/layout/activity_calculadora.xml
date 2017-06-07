@@ -11,8 +11,8 @@
     tools:context="com.github.rhapsody.calculadoracosmologica.CalculadoraActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="352dp"
+        android:layout_height="479dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
@@ -149,6 +149,8 @@
                         android:id="@+id/bigBangAge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
                         android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -170,6 +172,8 @@
                         android:id="@+id/redshiftAge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
                         android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -190,6 +194,8 @@
                         android:id="@+id/lightTravelTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
                         android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -211,6 +217,8 @@
                         android:id="@+id/comovingRadialMpc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
                         android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -239,6 +247,8 @@
                         android:id="@+id/comovingVolume"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
                         android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -261,6 +271,8 @@
                         android:id="@+id/angularDistanceMpc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
                         android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -291,6 +303,8 @@
                         android:id="@+id/scaleFactor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
                         android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -312,6 +326,8 @@
                         android:id="@+id/lumDistanceMpc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
                         android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"

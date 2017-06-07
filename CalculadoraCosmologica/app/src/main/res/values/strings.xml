@@ -1,30 +1,30 @@
 <resources>
-    <string name="app_name">Calculadora Cosmologica</string>
+    <string name="app_name">Cosmo Calc</string>
     <string name="version_code">0.1</string>
     <string name="version_name">beta</string>
 
-    <string name="bigBang">Big Bang </string>
-    <string name="redshift">Redshift </string>
-    <string name="lookback">Lookback time</string>
+    <string name="bigBang" translatable="false">Big Bang </string>
+    <string name="redshift" translatable="false">Redshift </string>
+    <string name="lookback" translatable="false">Lookback time</string>
     
-    <string name="comovingRadial">distância radial comóvel</string>
-    <string name="comovingVomlume">Volume comóvel</string>
-    <string name="angDistMpc">Distancia Angular</string>
-    <string name="scaleFactor">Fator de Escala (kpc/s)</string>
-    <string name="lumDistMpc">Distância de luminosidade</string>
+    <string name="comovingRadial">Comoving Radial Distance</string>
+    <string name="comovingVomlume">Comoving Volume</string>
+    <string name="angDistMpc">Angular Distance</string>
+    <string name="scaleFactor">Scale Factor(kpc/s)</string>
+    <string name="lumDistMpc">Luminosity Distance</string>
     
-    <string name="descricaoBotoes">Modelo de universo</string>
-    <string name="btOpen">Aberto</string>
-    <string name="btFlat">Plano</string>
-    <string name="btGeneral">Geral</string>
-    <string name="btReset">Valor Padrão</string>
+    <string name="descricaoBotoes">Model of Universe</string>
+    <string name="btOpen">Open</string>
+    <string name="btFlat">Flat</string>
+    <string name="btGeneral">General</string>
+    <string name="btReset">default Values</string>
     
     
-    <string name="mpc"> megaparsec</string>
-    <string name="gpc"> gigaparsec³</string>
-    <string name="gyr"> bilhoes de anos.</string>
+    <string name="mpc" translatable="false">" mpc"</string>
+    <string name="gpc">" Gpc³"</string>
+    <string name="gyr">Gyr</string>
     <string name="gly"> gly</string>
-    <string name="kpcs"> Kpc/s</string>
+    <string name="kpcs" translatable="false"> Kpc/s</string>
 
 
 </resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculadora Cosmologica</string>
+    <string name="angDistMpc">Distancia Angular</string>
+    <string name="btFlat">Plano</string>
+    <string name="btGeneral">Geral</string>
+    <string name="btOpen">Aberto</string>
+    <string name="btReset">Valor Padrão</string>
+    <string name="comovingRadial">distância radial comóvel</string>
+    <string name="comovingVomlume">Volume comóvel</string>
+    <string name="descricaoBotoes">Modelo de universo</string>
+    <string name="gly">" gly"</string>
+    <string name="gpc">" gigaparsec³"</string>
+    <string name="gyr">" bilhoes de anos."</string>
+    <string name="lumDistMpc">Distância de luminosidade</string>
+    <string name="scaleFactor">Fator de Escala (kpc/s)</string>
+    <string name="version_code">0.1</string>
+</resources>
