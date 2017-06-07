@@ -162,8 +162,8 @@ public class CalculadoraActivity extends AppCompatActivity {
         }
 
         if (!isOk) {
-            alerta.insert(0, "Os campos marcados  ");
-            alerta.append(" são de preeenchimento obrigatório");
+            alerta.insert(0, "Os campos marcados ");
+            alerta.append("são obrigatório");
         }
 
         return isOk;
