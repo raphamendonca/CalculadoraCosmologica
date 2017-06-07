@@ -2,26 +2,27 @@
     <string name="app_name">Calculadora Cosmologica</string>
     <string name="version_code">0.1</string>
     <string name="version_name">beta</string>
-    
-    <string name="">O tempo de viagem da luz foi de :</string>
 
-    <string name="bigBang">Big Bang: </string>
-    <string name="redshift">Redshift: </string>
-    <string name="lookback">Lookbacktime</string>
+    <string name="bigBang">Big Bang </string>
+    <string name="redshift">Redshift </string>
+    <string name="lookback">Lookback time</string>
     
-    <string name="comovingRadial">comoving radial distance:  </string>
-    <string name="comovingVomlume">Volume comóvel para o Z informado: </string>
-    <string name="angDistMpc">Isso da uma escala de :</string>  
-    <string name="scaleFactor">Scale Factor (kpc/s)</string>
-    <string name="lumDistMpc">A distância de luminosidade DL é: </string>
+    <string name="comovingRadial">distância radial comóvel</string>
+    <string name="comovingVomlume">Volume comóvel</string>
+    <string name="angDistMpc">Distancia Angular</string>
+    <string name="scaleFactor">Fator de Escala (kpc/s)</string>
+    <string name="lumDistMpc">Distância de luminosidade</string>
     
     <string name="descricaoBotoes">Modelo de universo</string>
     <string name="btOpen">Aberto</string>
     <string name="btFlat">Plano</string>
     <string name="btGeneral">Geral</string>
-    <string name="btReset">Reseta Valores</string>
+    <string name="btReset">Redefinir</string>
     
     
     <string name="mpc"> megaparsec</string>
+    <string name="gpc"> gigaparsec³</string>
     <string name="gyr"> bilhoes de anos.</string>
+    <string name="gly"> gly</string>
+    <string name="kpcs"> Kpc/s</string>
 </resources>

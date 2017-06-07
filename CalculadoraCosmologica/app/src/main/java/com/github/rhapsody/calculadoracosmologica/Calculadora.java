@@ -214,61 +214,14 @@ public class Calculadora {
 
     }
 
-	/*
-	 * public void display() { // prepare the HTML to output the results var
-	 * answer = '<P>For <A HREF="./glossary.html#H0">H<SUB>o</SUB></A> = ' + H0
-	 * + ', <A HREF="./glossary.html#Omega">Omega<SUB>M</SUB></A> = ' +
-	 * stround(WM,3) + ', <A HREF="./glossary.html#CC">Omega<SUB>vac</SUB></A> =
-	 * ' + stround(WV,3) + ', <A HREF="./glossary.html#redshift">z</A> = ' +
-	 * stround(z,3) + "\n<UL>"; var tunit = ' Gyr'; if (zage_Gyr < 0.1) { tunit
-	 * = ' Myr'; zage_Gyr = 1000*zage_Gyr; if (zage_Gyr < 0.1) { tunit = ' kyr';
-	 * zage_Gyr = 1000*zage_Gyr; if (zage_Gyr < 0.1) { tunit = ' yr'; zage_Gyr =
-	 * 1000*zage_Gyr; if (zage_Gyr < 0.1) { tunit = ' sec'; zage_Gyr =
-	 * 365.25*86400*zage_Gyr; }; }; }; }; answer += "<LI>It is now " +
-	 * stround(age_Gyr,3) + " Gyr since the Big Bang.\n"; answer +=
-	 * "<LI>The age at redshift z was "+stround(zage_Gyr,3)+tunit+".\n"; answer
-	 * += '<LI>The <A HREF="./cosmo_02.htm#DT">light travel time</A> was '+
-	 * stround(DTT_Gyr,3)+" Gyr.\n"; answer += '<LI>The <A
-	 * HREF="./cosmo_02.htm#DH">comoving radial distance,</A>' +
-	 * " which goes into Hubble's law, is " +
-	 * stround(DCMR_Mpc,1)+" Mpc or "+stround(DCMR_Gyr,3)+" Gly.\n"; answer +=
-	 * "<LI>The comoving volume within redshift z is "+stround(V_Gpc,3)+
-	 * " Gpc<SUP>3</SUP>.\n"; nda = 1; if (DA_Mpc < 100) {nda = 3;}; answer +=
-	 * '<LI>The <A HREF="./cosmo_02.htm#DA">' +
-	 * "angular size distance D<SUB>A</SUB></A> is "+
-	 * stround(DA_Mpc,nda)+" Mpc or "+stround(DA_Gyr,nda+3)+" Gly.\n"; answer +=
-	 * '<LI>This gives a scale of '+stround(kpc_DA,3)+' kpc/".\n'; answer +=
-	 * '<LI>The <A HREF="./cosmo_02.htm#DL">'+
-	 * "luminosity distance D<SUB>L</SUB></A> is "+stround(DL_Mpc,1)+
-	 * " Mpc or "+stround(DL_Gyr,3)+" Gly.\n</UL>\n"; return answer; }
-	 */
-    // compute the results for the default inputs
-    // compute();
-
-    // prepare the HTML for the frameset
-	/*
-	 * var f = '<FRAMESET COLS="25%,*">\n'; f += '<FRAME NAME="CCform"
-	 * SRC="./CCform.html">\n'; f += '<FRAME NAME="CCout"
-	 * SRC="./CCout.html">\n'; f += '</FRAMESET>';
-	 */
-    // and write it to the current page
-    // document.write(f);
-
     public void doOpen(double tH0, double tWM, double tz) {
         setValues(tH0, tWM, 0.0, tz);
     }
-
     public void doFlat(double tH0, double tWM, double tz) {
         setValues(tH0, tWM, 1.0 - tWM - 0.4165 / (tH0 * tH0), tz);
-
-
-
     }
-
     public void doGeneral(double tH0, double tWM, double tWV, double tz) {
         setValues(tH0, tWM, tWV, tz);
     }
-
-
 
 }

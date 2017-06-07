@@ -1,10 +1,13 @@
 package com.github.rhapsody.calculadoracosmologica;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CalculadoraActivity extends AppCompatActivity {
@@ -83,21 +86,21 @@ public class CalculadoraActivity extends AppCompatActivity {
     }
 
     protected void recarregaDados() {
-        bigBangeAge.setText(calc.stround(calc.age_Gyr, 3) + " Gyr");
-        redshiftAge.setText(calc.stround(calc.zage_Gyr, 3) + calc.tunit);
-        lightTravelTime.setText(calc.stround(calc.DTT_Gyr, 3) + " Gyr");
+        bigBangeAge.setText(calc.stround(calc.age_Gyr, 3));
+        redshiftAge.setText(calc.stround(calc.zage_Gyr, 3));
+        lightTravelTime.setText(calc.stround(calc.DTT_Gyr, 3));
 
-        comovingRadialMpc.setText(calc.stround(calc.DCMR_Mpc, 1) + " Mpc");
+        comovingRadialMpc.setText(calc.stround(calc.DCMR_Mpc, 1));
         //comovingRadialGly.setText(calc.stround(calc.DCMR_Gyr, 3) + " Gly");
 
-        comovingVolume.setText(calc.stround(calc.V_Gpc, 3) + " Gpc³");
+        comovingVolume.setText(calc.stround(calc.V_Gpc, 3));
 
-        angularDistanceMpc.setText(calc.stround(calc.DA_Gyr, 3) + " Mpc");
+        angularDistanceMpc.setText(calc.stround(calc.DA_Gyr, 3));
         //angularDistanceGly.setText(calc.stround(calc.DTT_Gyr, 3) + " Gly");
 
-        scaleFactor.setText(calc.stround(calc.kpc_DA, 3) + " kpc");
+        scaleFactor.setText(calc.stround(calc.kpc_DA, 3));
 
-        lumDistanceMpc.setText(calc.stround(calc.DL_Mpc, 1) + " Mpc");
+        lumDistanceMpc.setText(calc.stround(calc.DL_Mpc, 1));
         //lumDistanceGly.setText(calc.stround(calc.DTT_Gyr, 3) + " Gly");
 
     }
