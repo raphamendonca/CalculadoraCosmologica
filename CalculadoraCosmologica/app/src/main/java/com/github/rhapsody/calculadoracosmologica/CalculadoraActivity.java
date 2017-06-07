@@ -43,6 +43,8 @@ public class CalculadoraActivity extends AppCompatActivity {
         Button btReset = (Button) findViewById(R.id.restoreBtn);
         alertMSG = (TextView) findViewById(R.id.alertMSG);
 
+
+
         btOpen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,7 +98,8 @@ public class CalculadoraActivity extends AppCompatActivity {
         lumDistanceMpc = (TextView) findViewById(R.id.lumDistanceMpc);
         //lumDistanceGly = (TextView) findViewById(R.id.lumDistanceGly);
 
-
+        calc.doFlat(tH0, tWM, tz);
+        recarregaDados();
     }
 
     protected void recarregaDados() {
@@ -128,6 +131,11 @@ public class CalculadoraActivity extends AppCompatActivity {
         iWV.setText(String.valueOf(tWV));
     }
     protected void tirarFoco(){
+        iH0.getBackground().setColorFilter(0, PorterDuff.Mode.SRC_OVER);
+        iWM.getBackground().setColorFilter(0, PorterDuff.Mode.SRC_OVER);
+        iWV.getBackground().setColorFilter(0, PorterDuff.Mode.SRC_OVER);
+        iZ.getBackground().setColorFilter(0, PorterDuff.Mode.SRC_OVER);
+
         iH0.clearFocus();
         iZ.clearFocus();
         iWM.clearFocus();
@@ -141,31 +149,28 @@ public class CalculadoraActivity extends AppCompatActivity {
 
         boolean isOk = true;
         if (iH0.getText().toString().equals("")) {
-            //alerta.append(" H0  ");
             iH0.getBackground().setColorFilter(getResources().getColor(R.color.colorAlert), PorterDuff.Mode.SRC_OVER);
             isOk = false;
         }
         if (iWM.getText().toString().equals("")) {
-            //alerta.append(" Omega M ");
             iWM.getBackground().setColorFilter(getResources().getColor(R.color.colorAlert), PorterDuff.Mode.SRC_OVER);
             isOk = false;
         }
         if (iWV.getText().toString().equals("")) {
-            //alerta.append(" Omega V  ");
             iWV.getBackground().setColorFilter(getResources().getColor(R.color.colorAlert), PorterDuff.Mode.SRC_OVER);
             isOk = false;
         }
         if (iZ.getText().toString().equals("")) {
-            //alerta.append(" Z  ");
             iZ.getBackground().setColorFilter(getResources().getColor(R.color.colorAlert), PorterDuff.Mode.SRC_OVER);
             isOk = false;
         }
 
         if (!isOk) {
-            alerta.insert(0, "Os campos marcados ");
-            alerta.append("são obrigatório");
+            alerta.append("Os campos marcados são obrigatórios");
+
         }
 
         return isOk;
     }
+
 }
