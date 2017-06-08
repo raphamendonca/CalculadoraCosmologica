@@ -12,9 +12,10 @@ Exibe dados de cosmologia como:
  - Volume Comóvel
  - Distância Angular
  - Fator de Escala
- - Distancia de luminosidade
-  . . . 
-
-Projeto desenvolvido no Android Studio
+ - Distancia de luminosidade  
 
 Adaptado do projeto de Ned Wright. http://www.astro.ucla.edu/~wright/CosmoCalc.html
+O paper que documenta a Calculadora Cosmologica de Wright: http://www.jstor.org/stable/10.1086/510102?origin=JSTOR-pdf
+Lá ele descreve as fórmulas utilizadas para cada um dos resultados.
+
+Projeto desenvolvido no Android Studio
