@@ -10,7 +10,7 @@
     <string name="comovingRadial">Comoving Radial Distance</string>
     <string name="comovingVomlume">Comoving Volume</string>
     <string name="angDistMpc">Angular Distance</string>
-    <string name="scaleFactor">Scale Factor(kpc/s)</string>
+    <string name="scaleFactor">Scale Factor(kpc/")</string>
     <string name="lumDistMpc">Luminosity Distance</string>
     
     <string name="descricaoBotoes">Model of Universe</string>
@@ -18,13 +18,11 @@
     <string name="btFlat">Flat</string>
     <string name="btGeneral">General</string>
     <string name="btReset">default Values</string>
-    
-    
-    <string name="mpc" translatable="false">" mpc"</string>
-    <string name="gpc">" Gpc³"</string>
-    <string name="gyr">Gyr</string>
-    <string name="gly"> gly</string>
-    <string name="kpcs" translatable="false"> Kpc/s</string>
 
+    <string name="mpc" translatable="false">Mpc</string>
+    <string name="gpc">Gpc³</string>
+    <string name="gyr">Gyr</string>
+    <string name="gly"> Gly</string>
+    <string name="kpcs" translatable="false">Kpc/\"</string>
 
 </resources>

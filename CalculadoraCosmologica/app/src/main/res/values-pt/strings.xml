@@ -9,10 +9,10 @@
     <string name="comovingRadial">distância radial comóvel</string>
     <string name="comovingVomlume">Volume comóvel</string>
     <string name="descricaoBotoes">Modelo de universo</string>
-    <string name="gly">" gly"</string>
-    <string name="gpc">" gigaparsec³"</string>
-    <string name="gyr">" bilhoes de anos."</string>
+    <string name="gly">Gly</string>
+    <string name="gpc">Gigaparsec³</string>
+    <string name="gyr">bilhoes de anos.</string>
     <string name="lumDistMpc">Distância de luminosidade</string>
-    <string name="scaleFactor">Fator de Escala (kpc/s)</string>
+    <string name="scaleFactor">Fator de Escala (kpc/")</string>
     <string name="version_code">0.1</string>
 </resources>
