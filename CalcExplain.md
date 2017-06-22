@@ -7,20 +7,22 @@ Default Values:
 + Omegavac = 0.714
 + z = 3.000
 
+
+
 ### Big Bang time
 It is now 13.721 Gyr since the Big Bang.
  this value is calculated by age_Gyr
 
 **age_Gyr = age * (Tyr/H0)**
 
-+ age = DTT + zage 
- 
- where age is the integral from 0 to 1000 
-   age = 0; 
++ age = DTT + zage
+
+ where age is the integral from 0 to 1000
+   age = 0;
      para (i = 0; i != n; i++) {
        a = az*(i+0.5)/n;
        age = age + 1/suareRoot(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
-     };  
+     };
 + zage = az*age/n * 10.0 ^ dzage
 + age = DTT +  az*age/n * 10.0 ^ dzage
    
